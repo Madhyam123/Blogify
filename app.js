@@ -36,6 +36,7 @@ const connectDB =  async ()=>{
   }
 
 }
+connectDB();
 
 app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));
