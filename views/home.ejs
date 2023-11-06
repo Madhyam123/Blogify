@@ -4,14 +4,21 @@
     <%- include('./partials/head') %>
     <title>Homepage</title>
   </head>
+  <style>
+    @media (max-width:600px) {
+      .main{
+        width: fit-content;
+      }
+    }
+  </style>
   <body>
     <%- include('./partials/nav') %>
 
-    <div class="container container-sm container-md container-lg mt-3">
+    <div class="container  mt-3">
       <div class="row row-cols-4">
         <% blogs.forEach(blog => { %>
-        <div class="col">
-          <div class="card col" style="width: 18rem">
+        <div class=".col-sm-1 .col-md-3 .col-lg-2  main" >
+          <div class="card col" style="width: 18rem,">
             <img src="<%= blog.coverImageURL %>" class="card-img-top" />
             <div class="card-body">
               <h5 class="card-title"><%= blog.title %></h5>
